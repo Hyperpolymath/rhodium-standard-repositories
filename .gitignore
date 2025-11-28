@@ -1,0 +1,59 @@
+# SPDX-License-Identifier: MIT AND Palimpsest-0.8
+# SPDX-FileCopyrightText: 2025 The Rhodium Standard Contributors
+
+# Build artifacts
+target/
+dist/
+build/
+_build/
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Dependencies
+node_modules/
+.mix/
+deps/
+vendor/
+
+# Environment
+.env
+.env.local
+*.env
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Nix
+result
+result-*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.log
+
+# Test coverage
+coverage/
+.coverage
+htmlcov/
+
+# Package managers
+Cargo.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+mix.lock
+
+# Except for examples (they need lock files)
+!examples/*/Cargo.lock
+!examples/*/mix.lock
+!examples/*/flake.lock
