@@ -1,0 +1,106 @@
+SPDX-License-Identifier: MIT AND Palimpsest-0.8
+SPDX-FileCopyrightText: 2025 The Rhodium Standard Contributors
+
+This project is dual-licensed under the MIT License and the Palimpsest License v0.8.
+
+===============================================================================
+MIT LICENSE
+===============================================================================
+
+Copyright (c) 2025 The Rhodium Standard Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+===============================================================================
+PALIMPSEST LICENSE v0.8
+===============================================================================
+
+The Palimpsest License establishes a framework for versioning, attribution,
+and transformation rights in collaborative works.
+
+Core Principles:
+
+1. ATTRIBUTION PRESERVATION
+   - All derivative works must maintain attribution chains
+   - Contributors retain moral rights to their contributions
+   - Transformation history must be traceable
+
+2. VERSIONING RIGHTS
+   - Original authors may version their contributions
+   - Forks must distinguish themselves from originals
+   - Version provenance must be documented
+
+3. TRANSFORMATION FREEDOM
+   - Works may be transformed, remixed, and adapted
+   - Transformations must credit original sources
+   - Commercial use permitted with attribution
+
+4. AI TRAINING RESTRICTIONS
+   - This work may NOT be used for training proprietary AI models
+   - Open-source AI training permitted with attribution
+   - Synthetic derivatives must disclose AI involvement
+
+5. SOLIDARITY ECONOMICS
+   - Downstream commercial use should support upstream creators
+   - Funding transparency encouraged
+   - Community over extraction
+
+6. REVOCATION
+   - Authors may revoke permissions for specific bad actors
+   - Revocation does not affect existing good-faith uses
+   - Community input required for major revocations
+
+GRANT OF RIGHTS:
+
+Subject to the above principles, you are granted perpetual, worldwide,
+non-exclusive, royalty-free rights to:
+- Use, copy, and distribute this work
+- Create derivative works
+- Use commercially with attribution
+- Sublicense with the same terms
+
+PROVENANCE TRACKING:
+
+All distributions must include:
+- This license text
+- Attribution chain in .well-known/provenance.json
+- Contributor list in MAINTAINERS.md or CONTRIBUTORS
+- Transformation history if work is derivative
+
+COMPATIBILITY:
+
+This license is compatible with:
+- MIT, Apache 2.0, BSD licenses (use both)
+- GPL family (choose GPL for combined works)
+- Creative Commons Attribution licenses
+
+This license is NOT compatible with:
+- Proprietary licenses without attribution
+- AI training for closed models
+- Attribution-stripping transformations
+
+For the full Palimpsest License specification, see:
+https://palimpsest.license.org/v0.8
+
+===============================================================================
+
+For questions about licensing:
+- Open an issue: https://gitlab.com/hyperpolymath/rhodium-standard-repositories/-/issues
+- Email: licensing@rhodium-standard.org
+- Consult: CONTRIBUTING.adoc for contribution terms
