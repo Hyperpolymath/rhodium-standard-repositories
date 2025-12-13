@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
 name: Auto-Configure New Repositories
 
 on:
@@ -5,9 +6,13 @@ on:
     - cron: '0 6 * * *'  # Daily at 6 AM UTC
   workflow_dispatch:      # Manual trigger
 
+permissions: read-all
+
 jobs:
   configure-new-repos:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Get all repos
@@ -41,6 +46,7 @@ jobs:
             if [ -z "$MIRROR_EXISTS" ]; then
               echo "  Adding mirror.yml..."
               cat > /tmp/mirror.yml << 'MIRROREOF'
+          # SPDX-License-Identifier: AGPL-3.0-or-later
           name: Mirror to GitLab and Bitbucket
 
           on:
@@ -50,12 +56,16 @@ jobs:
                 - 'v*'
             workflow_dispatch:
 
+          permissions: read-all
+
           jobs:
             mirror-gitlab:
               runs-on: ubuntu-latest
+              permissions:
+                contents: read
               if: ${{ vars.GITLAB_MIRROR_ENABLED == 'true' }}
               steps:
-                - uses: actions/checkout@v4
+                - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
                   with:
                     fetch-depth: 0
                 - name: Push to GitLab
@@ -69,9 +79,11 @@ jobs:
 
             mirror-bitbucket:
               runs-on: ubuntu-latest
+              permissions:
+                contents: read
               if: ${{ vars.BITBUCKET_MIRROR_ENABLED == 'true' }}
               steps:
-                - uses: actions/checkout@v4
+                - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
                   with:
                     fetch-depth: 0
                 - name: Push to Bitbucket
@@ -97,6 +109,7 @@ jobs:
             if [ -z "$CODEQL_EXISTS" ]; then
               echo "  Adding CodeQL..."
               cat > /tmp/codeql.yml << 'CODEQLEOF'
+          # SPDX-License-Identifier: AGPL-3.0-or-later
           name: "CodeQL"
           on:
             push:
@@ -105,6 +118,9 @@ jobs:
               branches: [ "main", "master" ]
             schedule:
               - cron: '30 1 * * 1'
+
+          permissions: read-all
+
           jobs:
             analyze:
               name: Analyze
@@ -124,12 +140,12 @@ jobs:
                     - language: python
                       build-mode: none
               steps:
-              - uses: actions/checkout@v4
-              - uses: github/codeql-action/init@v3
+              - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+              - uses: github/codeql-action/init@662472033e021d55d94146f66f6058822b0b39fd # v3.28.1
                 with:
                   languages: ${{ matrix.language }}
                   build-mode: ${{ matrix.build-mode }}
-              - uses: github/codeql-action/analyze@v3
+              - uses: github/codeql-action/analyze@662472033e021d55d94146f66f6058822b0b39fd # v3.28.1
                 with:
                   category: "/language:${{matrix.language}}"
           CODEQLEOF
