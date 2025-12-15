@@ -82,6 +82,33 @@ Core documentation must exist with exact filenames:
 
 ---
 
+### 2.2.5 AI Context Files
+
+Machine-readable context for AI assistants:
+
+- [ ] `META.scm` — Architecture decisions, development practices, design rationale
+
+- [ ] `ECOSYSTEM.scm` — Project ecosystem position, relationships, boundaries
+
+- [ ] `STATE.scm` — Current project state, progress, blockers, session history
+
+- [ ] SPDX headers present in all three files
+
+- [ ] Guile Scheme syntax valid (parseable)
+
+**Purpose**: These files enable AI assistants to maintain context across sessions, understand architectural decisions, and track project state. They work alongside `.claude/CLAUDE.md` or similar instruction files.
+
+**Specification Repositories**:
+
+- [META.scm](https://github.com/hyperpolymath/META.scm)
+
+- [ECOSYSTEM.scm](https://github.com/hyperpolymath/ECOSYSTEM.scm)
+
+- [STATE.scm](https://github.com/hyperpolymath/state.scm)
+
+**Automation**: `test -f META.scm && test -f ECOSYSTEM.scm && test -f STATE.scm`
+
+---
 ### 2.3 Structural Requirements
 
 README must contain:
@@ -131,7 +158,7 @@ LICENSE must be:
 
 ### 3.1 Type Safety
 
-- [ ] Primary language provides compile-time type safety (ReScript/Rust/Ada/Haskell)
+- [ ] Primary language provides compile-time type safety (Ada/Chapel/Elixir/Haskell/Julia/ReScript/Rust)
 - [ ] No TypeScript (unsound gradual typing)
 - [ ] No Python (except SaltStack, temporary)
 - [ ] No JavaScript (being actively eliminated)
