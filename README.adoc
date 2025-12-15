@@ -46,8 +46,47 @@ Rhodium is the *rarest and most precious* of all metals, chosen for specific sym
 | Architecture enforces collaborative patterns
 
 | Language Polyglotism
-| Using Ada, Rust, Elixir, Haskell, ReScript instead of JavaScript/Python monoculture
+| Using Ada, Chapel, Elixir, Haskell, Julia, ReScript, Rust instead of JavaScript/Python monoculture
 |===
+
+=== AI Context Files
+
+
+
+RSR repositories include three machine-readable Scheme files for AI assistant context preservation:
+
+
+
+[cols="1,3",options="header"]
+
+|===
+
+| File | Purpose
+
+
+
+| `META.scm`
+
+| Architecture decisions (ADRs), development practices, design rationale
+
+
+
+| `ECOSYSTEM.scm`
+
+| Project ecosystem position, relationships, explicit boundaries
+
+
+
+| `STATE.scm`
+
+| Current project state, progress tracking, session continuity
+
+|===
+
+
+
+These files work alongside `.claude/CLAUDE.md` (or similar AI instruction files) to provide structured context that persists across AI conversation sessions. See link:docs/ai-context-files.md[AI Context Files Specification] for complete documentation and links to the specification repositories.
+
 
 == Quick Start
 
