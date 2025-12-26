@@ -28,3 +28,12 @@
 [submodule "satellites/consent-aware-http"]
 	path = satellites/consent-aware-http
 	url = git@github.com:hyperpolymath/consent-aware-http.git
+[submodule "satellites/rsr-certifier"]
+	path = satellites/rsr-certifier
+	url = git@github.com:hyperpolymath/git-rsr-certified.git
+[submodule "satellites/rsr-deployer"]
+	path = satellites/rsr-deployer
+	url = git@github.com:hyperpolymath/repo-slm-augmentor.git
+[submodule "satellites/robot-repo-automaton"]
+	path = satellites/robot-repo-automaton
+	url = git@github.com:hyperpolymath/robot-repo-automaton.git
