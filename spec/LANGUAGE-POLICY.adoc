@@ -4,10 +4,15 @@
 = RSR Language Policy
 :author: hyperpolymath
 :revnumber: 1.0.0
-:revdate: 2025-12-26
+:revdate: 2025-12-27
 :toc: left
 :icons: font
 :source-repo: https://github.com/hyperpolymath/cccp
+
+[NOTE]
+====
+*Version Status*: v1.0.0 *FROZEN* — Language allowed/banned lists are immutable.
+====
 
 == Overview
 

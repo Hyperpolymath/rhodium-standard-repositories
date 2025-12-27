@@ -2,13 +2,18 @@
 ;; SPDX-FileCopyrightText: 2024-2025 hyperpolymath
 ;;
 ;; RSR Compliance Criteria - Machine Readable
-;; 11 categories, 150+ criteria for automated validation
+;; 11 categories, 50+ criteria for automated validation
+;;
+;; VERSION: 1.0.0 (FROZEN 2025-12-27)
+;; These criteria are immutable in v1.x. Changes require v2.0.
 
 (define-module (rsr compliance-criteria)
+  #:use-module (rsr version)
   #:export (categories
             get-category
             criteria-count
-            validate-criterion))
+            validate-criterion
+            spec-version))
 
 ;; All 11 compliance categories
 (define categories
@@ -165,3 +170,7 @@
 (define (validate-criterion criterion-id repo-path)
   ;; Returns: 'pass | 'fail | 'partial | 'na
   'pass)  ; Stub
+
+;; Return spec version for this module
+(define (spec-version)
+  (version-string))

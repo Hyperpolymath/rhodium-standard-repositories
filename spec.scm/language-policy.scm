@@ -3,13 +3,18 @@
 ;;
 ;; RSR Language Policy - Machine Readable
 ;; Derived from CCCP (Campaign for Cooler Coding and Programming)
+;;
+;; VERSION: 1.0.0 (FROZEN 2025-12-27)
+;; Language allowed/banned lists are immutable in v1.x.
 
 (define-module (rsr language-policy)
+  #:use-module (rsr version)
   #:export (allowed-languages
             banned-languages
             language-allowed?
             get-replacement
-            file-extension-language))
+            file-extension-language
+            spec-version))
 
 ;; Allowed languages with use cases
 (define allowed-languages
@@ -92,3 +97,7 @@
           (if (and extensions (member ext extensions))
               lang-name
               (loop (cdr langs)))))))
+
+;; Return spec version for this module
+(define (spec-version)
+  (version-string))

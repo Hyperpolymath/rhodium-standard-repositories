@@ -3,12 +3,17 @@
 ;;
 ;; RSR Tier Definitions - Machine Readable
 ;; For tooling integration with RSR compliance checkers
+;;
+;; VERSION: 1.0.0 (FROZEN 2025-12-27)
+;; Tier thresholds and requirements are immutable in v1.x.
 
 (define-module (rsr tiers)
+  #:use-module (rsr version)
   #:export (tiers
             tier-requirements
             get-tier-for-score
-            tier-color))
+            tier-color
+            spec-version))
 
 ;; Tier definitions with score ranges and display colors
 (define tiers
@@ -89,3 +94,7 @@
     (if tier-data
         (assoc-ref tier-data 'color)
         "#808080")))  ; gray for unknown
+
+;; Return spec version for this module
+(define (spec-version)
+  (version-string))
